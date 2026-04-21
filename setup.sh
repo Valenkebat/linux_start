@@ -58,6 +58,11 @@ gpg --export --armor 7568D9BB55FF9E5287D586017AE645C0CF8E292A | sudo tee /etc/ap
 sudo apt update
 sudo apt install -y pritunl-client-electron
 
+
+echo ">>> Instalando Bitwarden (Gestor de Contraseñas)..."
+sudo snap install bitwarden
+sudo snap install bw
+
 echo ">>> Instalando Reaper (Producción de Audio vía Flatpak)..."
 flatpak install flathub fm.reaper.Reaper -y
 

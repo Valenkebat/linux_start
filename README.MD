@@ -21,8 +21,9 @@ El script automatiza la instalación de las siguientes herramientas:
 * **DBeaver CE:** Gestor de bases de datos universal.
 * **pgcli:** Cliente de línea de comandos para PostgreSQL con autocompletado avanzado.
 * **jq:** Procesador JSON de línea de comandos, ideal para extraer datos de APIs.
-* **Pritunl Client:** Cliente VPN para conexiones seguras.
 * **Bruno:** Alternativa *open-source* y ligera a Postman para testeo de APIs.
+* **Pritunl Client:** Cliente VPN para conexiones seguras.
+* **BitWarden:** Gestor de Contraseñas
 
 ### 🎵 Producción Musical y Creatividad
 * **REAPER:** DAW profesional (vía Flatpak) para grabación y mezcla.
