@@ -38,7 +38,7 @@ sudo snap install bruno   # Alternativa a Postman
 sudo snap install steam
 
 echo ">>> Instalando herramientas específicas de Data e Interfaces..."
-sudo snap install dbeaver-ce
+sudo snap install dbeaver-ce --classic
 sudo snap install figma-linux
 sudo apt install -y pgcli # Cliente de Postgres para la terminal con autocompletado
 
@@ -47,16 +47,6 @@ wget https://github.com/duckdb/duckdb/releases/latest/download/duckdb_cli-linux-
 unzip duckdb_cli-linux-amd64.zip
 sudo mv duckdb /usr/local/bin/
 rm duckdb_cli-linux-amd64.zip
-
-echo ">>> Instalando Pritunl Client..."
-sudo tee /etc/apt/sources.list.d/pritunl.list << EOF
-deb https://repo.pritunl.com/stable/apt jammy main
-EOF
-gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 7568D9BB55FF9E5287D586017AE645C0CF8E292A
-gpg --export --armor 7568D9BB55FF9E5287D586017AE645C0CF8E292A | sudo tee /etc/apt/trusted.gpg.d/pritunl.asc
-sudo apt update
-sudo apt install -y pritunl-client-electron
-
 
 echo ">>> Instalando Bitwarden (Gestor de Contraseñas)..."
 sudo snap install bitwarden
