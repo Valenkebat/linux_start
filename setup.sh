@@ -34,7 +34,6 @@ sudo snap install code --classic
 sudo snap install obsidian --classic
 sudo snap install discord
 sudo snap install telegram-desktop
-sudo snap install zapzap  # WhatsApp
 sudo snap install bruno   # Alternativa a Postman
 sudo snap install steam
 

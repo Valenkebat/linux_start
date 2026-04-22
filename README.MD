@@ -32,7 +32,6 @@ El script automatiza la instalación de las siguientes herramientas:
 ### 💬 Comunicación y Productividad
 * **Obsidian:** Gestión de conocimiento y toma de notas en Markdown.
 * **Discord / Telegram:** Comunicación con comunidades y equipos.
-* **ZapZap:** Cliente de escritorio para WhatsApp.
 * **Steam:** Para gaming nativo y vía Proton (optimizado para GPUs AMD).
 
 ## 🚀 Cómo usarlo
