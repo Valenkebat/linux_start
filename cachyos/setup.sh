@@ -11,7 +11,6 @@ echo ">>> Actualizando el sistema base..."
 paru -Syu --noconfirm
 
 echo ">>> Instalando utilidades básicas y dependencias del sistema..."
-# wl-clipboard es vital para copiar/pegar desde la terminal o Zed si usás Wayland/Hyprland
 paru -S --needed --noconfirm base-devel git curl wget htop flatpak unzip jq wl-clipboard
 
 echo ">>> Configurando Flathub..."
@@ -21,7 +20,6 @@ echo ">>> Instalando Entornos de Ejecución (Python y Node.js)..."
 paru -S --needed --noconfirm python python-pip python-pipx nodejs npm pnpm
 
 echo ">>> Instalando Rust y utilidades modernas de terminal..."
-# eza (ls), bat (cat), zoxide (cd), fzf (búsqueda difusa)
 paru -S --needed --noconfirm rustup eza bat zoxide fzf
 rustup default stable
 
@@ -36,13 +34,14 @@ sudo systemctl enable --now docker.service
 echo ">>> Instalando Herramientas de Data Engineering y Bases de Datos..."
 paru -S --needed --noconfirm duckdb dbeaver penpot-desktop-bin pgcli aws-cli-v2 mitmproxy
 
+echo ">>> Instalando Navegadores y Herramientas Web (Scraping)..."
+paru -S --needed --noconfirm chromium
+
 echo ">>> Instalando Control de Versiones..."
 paru -S --needed --noconfirm bitbucket-cli
 
 echo ">>> Instalando IA Local y Asistentes de Código..."
-# Ollama se instala pero requiere inicio manual vía systemctl
 paru -S --needed --noconfirm ollama
-# Aider se aísla con pipx para no romper el entorno global de Python
 pipx install aider-chat
 
 echo ">>> Instalando Productividad, Comunicación y Privacidad..."
@@ -53,13 +52,11 @@ paru -S --needed --noconfirm qpwgraph gpxsee
 flatpak install flathub fm.reaper.Reaper -y
 
 echo ">>> Configurando Alias y Utilidades en la shell..."
-# Detectar shell actual (Zsh es común en CachyOS)
 SHELL_RC="$HOME/.bashrc"
 if [ -f "$HOME/.zshrc" ]; then
     SHELL_RC="$HOME/.zshrc"
 fi
 
-# Inyectar configuraciones si no existen previamente
 if ! grep -q "zoxide init" "$SHELL_RC"; then
     echo -e "\n# Inicializar zoxide" >> "$SHELL_RC"
     echo 'eval "$(zoxide init '"$(basename $SHELL)"')"' >> "$SHELL_RC"
