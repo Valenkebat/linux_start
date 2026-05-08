@@ -1,6 +1,6 @@
 # My Linux Setup 🐧 🚀
 
-Este repositorio contiene un script de automatización (`setup.sh`) diseñado para configurar un entorno de trabajo completo en distribuciones basadas en Debian/Ubuntu (preferentemente Ubuntu 24.04 LTS o Pop!_OS).
+Este repositorio contiene un script de automatización (`setup.sh`) diseñado para configurar un entorno de trabajo completo en distribuciones basadas en Debian/Ubuntu (Carpeta ubuntu) (preferentemente Ubuntu 24.04 LTS o Pop!_OS) o en Arch Linux (Carpeta arch) (preferentemente CachyOS).
 
 Está optimizado para el perfil de un **Data Engineer** que también trabaja en **producción musical**.
 
